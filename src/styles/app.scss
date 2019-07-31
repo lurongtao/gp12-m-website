@@ -1,5 +1,6 @@
-$base_color: green;
+@import './yo/usage/core/reset';
+@import './module/index';
 
-body {
-  background: $base_color;
+#root {
+  height: 100%;
 }

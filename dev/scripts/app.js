@@ -115,7 +115,7 @@ eval("var indexTpl = __webpack_require__(/*! ../views/index.html */ \"../src/scr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<div>  <header>拉勾网</header>  <main>content</main>  <footer>tabbar</footer></div>\"\n\n//# sourceURL=webpack:///../src/scripts/views/index.html?");
+eval("module.exports = \"<div class=\\\"index-wrap\\\">  <header>拉勾网</header>  <main>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/></main>  <footer>tabbar</footer></div>content<br/>\"\n\n//# sourceURL=webpack:///../src/scripts/views/index.html?");
 
 /***/ })
 

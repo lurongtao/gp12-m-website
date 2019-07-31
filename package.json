@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
     "dev": "gulp --gulpfile config/dev_gulpfile.js",
     "build": "gulp --gulpfile config/prod_gulpfile.js"
   },
@@ -29,5 +28,7 @@
     "node-sass": "^4.12.0",
     "string-loader": "0.0.1",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
   }
 }

@@ -89,7 +89,7 @@ function delDevFolder() {
 
 // CSS 模块化
 function packCSS () {
-  return src('../src/styles/**/*.scss')
+  return src(['../src/styles/**/*.scss', '!../src/styles/**/yo/**'])
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('../dev/styles'))
     .pipe(connect.reload())
