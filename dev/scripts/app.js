@@ -90,23 +90,32 @@
 /*!*****************************!*\
   !*** ../src/scripts/app.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controller_name__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controller/name */ \"../src/scripts/controller/name.js\");\n\nconsole.log(_controller_name__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n\n//# sourceURL=webpack:///../src/scripts/app.js?");
+eval("__webpack_require__(/*! ./controller/IndexController */ \"../src/scripts/controller/IndexController.js\");\n\n//# sourceURL=webpack:///../src/scripts/app.js?");
 
 /***/ }),
 
-/***/ "../src/scripts/controller/name.js":
-/*!*****************************************!*\
-  !*** ../src/scripts/controller/name.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "../src/scripts/controller/IndexController.js":
+/*!****************************************************!*\
+  !*** ../src/scripts/controller/IndexController.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ('name5');\n\n//# sourceURL=webpack:///../src/scripts/controller/name.js?");
+eval("var indexTpl = __webpack_require__(/*! ../views/index.html */ \"../src/scripts/views/index.html\");\n\ndocument.querySelector('#root').innerHTML = indexTpl;\n\n//# sourceURL=webpack:///../src/scripts/controller/IndexController.js?");
+
+/***/ }),
+
+/***/ "../src/scripts/views/index.html":
+/*!***************************************!*\
+  !*** ../src/scripts/views/index.html ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<div>  <header>拉勾网</header>  <main>content</main>  <footer>tabbar</footer></div>\"\n\n//# sourceURL=webpack:///../src/scripts/views/index.html?");
 
 /***/ })
 

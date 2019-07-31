@@ -1,2 +1,1 @@
-import name from './controller/name'
-console.log(name)
+require('./controller/IndexController')

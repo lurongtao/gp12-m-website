@@ -2,13 +2,19 @@
  * 1、启动一个Webserver
  * 2、JS 模块化
  * 3、CSS 模块化（scss）
- * 4、Mock数据
+ * 4、版本号控制
+ * 5、代码压缩
+ * 6、Mock数据
  */
 
 const connect = require('gulp-connect')
 const webpack = require('webpack-stream')
 const sass = require('gulp-sass')
+const rev = require('gulp-rev')
+const revCollector = require('gulp-rev-collector')
 const del = require('del')
+const cleanCSS = require('gulp-clean-css')
+const htmlmin = require('gulp-htmlmin')
 const proxy = require('http-proxy-middleware')
 
 const { 
@@ -21,7 +27,9 @@ const {
 
 // 拷贝html
 function copyHtml () {
-  return src(['../src/*.html'])
+  return src(['../src/*.html', '../dev/rev/**/*.json'])
+    .pipe(revCollector())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('../dev'))
     .pipe(connect.reload())
 }
@@ -51,7 +59,7 @@ function webServer () {
 function packJS () {
   return src('../src/scripts/app.js')
     .pipe(webpack({
-        mode: 'development',
+        mode: 'production',
         entry: '../src/scripts/app.js',
         output: {
           filename: 'app.js'
@@ -68,15 +76,14 @@ function packJS () {
                   plugins: ['@babel/plugin-transform-runtime']
                 }
               }
-            },
-            {
-              test: /\.html$/,
-              loader: 'string-loader'
             }
           ]
         }
       }))
+    .pipe(rev())
     .pipe(dest('../dev/scripts'))
+    .pipe(rev.manifest())
+    .pipe(dest('../dev/rev/scripts'))
     .pipe(connect.reload())
 }
 
@@ -91,12 +98,23 @@ function delDevFolder() {
 function packCSS () {
   return src('../src/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(rev())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(dest('../dev/styles'))
+    .pipe(rev.manifest())
+    .pipe(dest('../dev/rev/styles'))
     .pipe(connect.reload())
-}
+} 
+
+// function copyJS () {
+//   return src('../src/scripts/*.js')
+//     .pipe(dest('../dev/scripts'))
+//     .pipe(connect.reload())
+// }
 
 function watcher () {
   watch('../src/*.html', series(copyHtml))
+  // watch('../src/scripts/*.js', series(copyJS))
   watch('../src/scripts/**/*.js', packJS)
   watch('../src/styles/**/*.scss', packCSS)
 }
