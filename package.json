@@ -1,0 +1,19 @@
+{
+  "name": "M-WebSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "gulp --gulpfile config/dev_gulpfile.js",
+    "build": "gulp --gulpfile config/prod_gulpfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "webpack-stream": "^5.2.1"
+  }
+}
