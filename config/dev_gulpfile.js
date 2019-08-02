@@ -33,6 +33,13 @@ function copyAssets () {
     .pipe(connect.reload())
 }
 
+// 拷贝 libs
+function copyLibs () {
+  return src(['../src/libs/**/*'])
+    .pipe(dest('../dev/libs'))
+    .pipe(connect.reload())
+}
+
 
 // 启动一个本地的 web server
 function webServer () {
@@ -108,6 +115,7 @@ function watcher () {
   watch('../src/scripts/**/*', packJS)
   watch('../src/styles/**/*.scss', packCSS)
   watch('../src/assets/**/*', copyAssets)
+  watch('../src/libs/**/*', copyLibs)
 }
 
-exports.default = series(delDevFolder, packJS, packCSS, parallel(copyAssets,copyHtml), parallel(webServer, watcher))
+exports.default = series(delDevFolder, packJS, packCSS, parallel(copyAssets,copyLibs,copyHtml), parallel(webServer, watcher))

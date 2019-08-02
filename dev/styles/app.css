@@ -738,7 +738,6 @@ a {
   .index-wrap main {
     flex: 1;
     overflow: hidden;
-    font-size: .73rem;
     background: #fff; }
   .index-wrap footer {
     color: #c2cfcc;
@@ -756,7 +755,7 @@ a {
         top: 0;
         left: 0;
         content: "\0020";
-        border-color: red;
+        border-color: #ccc;
         border-style: solid;
         border-width: 1px 0 0 0;
         -webkit-transform-origin: 0 0;
@@ -789,6 +788,111 @@ a {
         .index-wrap footer ul li.active {
           background: #e7f3f0;
           color: #00b38a; }
+
+.index-wrap main .pos-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .index-wrap main .pos-wrap nav {
+    height: .44rem;
+    display: flex;
+    padding: 0 .15rem;
+    position: relative; }
+    .index-wrap main .pos-wrap nav::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #ccc;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .index-wrap main .pos-wrap nav::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .index-wrap main .pos-wrap nav::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .index-wrap main .pos-wrap nav::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+    .index-wrap main .pos-wrap nav div:first-child {
+      flex: 1;
+      line-height: .44rem;
+      color: #555; }
+    .index-wrap main .pos-wrap nav div:last-child {
+      width: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .index-wrap main .pos-wrap nav div:last-child button {
+        height: .3rem;
+        border: 0;
+        width: .9rem;
+        background: #f5f5f5;
+        color: #00b38a;
+        border-radius: .15rem; }
+  .index-wrap main .pos-wrap ul {
+    overflow-y: scroll;
+    flex: 1; }
+    .index-wrap main .pos-wrap ul li.list-item {
+      padding: .14rem;
+      display: flex;
+      position: relative; }
+      .index-wrap main .pos-wrap ul li.list-item::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        content: "\0020";
+        border-color: #ccc;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .index-wrap main .pos-wrap ul li.list-item::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .index-wrap main .pos-wrap ul li.list-item::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .index-wrap main .pos-wrap ul li.list-item::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+      .index-wrap main .pos-wrap ul li.list-item img {
+        width: .6rem;
+        height: .6rem; }
+      .index-wrap main .pos-wrap ul li.list-item .item-desc {
+        padding-left: .15rem;
+        flex: 1; }
+        .index-wrap main .pos-wrap ul li.list-item .item-desc h2.item-title {
+          font-size: .16rem; }
+        .index-wrap main .pos-wrap ul li.list-item .item-desc p.item-info {
+          display: flex;
+          justify-content: space-between; }
+          .index-wrap main .pos-wrap ul li.list-item .item-desc p.item-info > span:last-child {
+            font-size: .16rem;
+            color: #00b38a; }
+        .index-wrap main .pos-wrap ul li.list-item .item-desc p.item-time {
+          color: #888; }
 
 #root {
   height: 100%; }

@@ -1,0 +1,2 @@
+art-template:
+http://aui.github.io/art-template/zh-cn/docs/installation.html
