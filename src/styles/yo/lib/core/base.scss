@@ -11,7 +11,7 @@ $_base: (
     // root字号类型：normal | scaling
     // normal表示root字号使用 `font-size-root`
     // scaling表示root字号使用 `font-size-root-scaling`
-    responsive-type:        scaling,
+    responsive-type:        normal,
     // html root使用100px，方便rem单位的换算
     font-size-root:         100px,
     // 适配：用于做元素随屏幕大小而变化的情况

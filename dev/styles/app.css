@@ -527,7 +527,7 @@ body {
 html {
   background-color: #eee;
   color: #212121;
-  font-size: 26.66667vw;
+  font-size: 100px;
   -webkit-user-select: none;
   user-select: none; }
 
@@ -720,6 +720,10 @@ a {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
 
+@font-face {
+  font-family: yofont;
+  src: url(/assets/icons/iconfont.woff) format("woff"), url(/assets/icons/iconfont.ttf) format("truetype"); }
+
 .index-wrap {
   height: 100%;
   display: flex;
@@ -734,7 +738,57 @@ a {
   .index-wrap main {
     flex: 1;
     overflow: hidden;
-    font-size: .73rem; }
+    font-size: .73rem;
+    background: #fff; }
+  .index-wrap footer {
+    color: #c2cfcc;
+    background: #f6f6f6; }
+    .index-wrap footer ul {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; }
+      .index-wrap footer ul::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        content: "\0020";
+        border-color: red;
+        border-style: solid;
+        border-width: 1px 0 0 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .index-wrap footer ul::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .index-wrap footer ul::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .index-wrap footer ul::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+      .index-wrap footer ul li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .index-wrap footer ul li i, .index-wrap footer ul li b {
+          font-weight: 100; }
+        .index-wrap footer ul li i {
+          margin-top: -0.02rem; }
+        .index-wrap footer ul li.active {
+          background: #e7f3f0;
+          color: #00b38a; }
 
 #root {
   height: 100%; }

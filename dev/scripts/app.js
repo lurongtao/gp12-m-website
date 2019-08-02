@@ -115,7 +115,7 @@ eval("var indexTpl = __webpack_require__(/*! ../views/index.html */ \"../src/scr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<div class=\\\"index-wrap\\\">  <header>拉勾网</header>  <main>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/></main>  <footer>tabbar</footer></div>content<br/>\"\n\n//# sourceURL=webpack:///../src/scripts/views/index.html?");
+eval("module.exports = \"<div class=\\\"index-wrap\\\">  <header>拉勾网</header>  <main></main>  <footer>    <nav>      <ul>        <li class=\\\"active\\\">          <i class=\\\"yo-ico\\\">&#xe6b8;</i>          <b>职位</b>        </li>        <li>          <i class=\\\"yo-ico\\\">&#xe65c;</i>          <b>搜索</b>        </li>        <li>          <i class=\\\"yo-ico\\\">&#xe736;</i>          <b>我的</b>        </li>      </ul>    </nav>  </footer></div>content<br/>\"\n\n//# sourceURL=webpack:///../src/scripts/views/index.html?");
 
 /***/ })
 

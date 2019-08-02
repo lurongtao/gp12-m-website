@@ -26,6 +26,14 @@ function copyHtml () {
     .pipe(connect.reload())
 }
 
+// 拷贝 assest
+function copyAssets () {
+  return src(['../src/assets/**/*'])
+    .pipe(dest('../dev/assets'))
+    .pipe(connect.reload())
+}
+
+
 // 启动一个本地的 web server
 function webServer () {
   return connect.server({
@@ -89,7 +97,7 @@ function delDevFolder() {
 
 // CSS 模块化
 function packCSS () {
-  return src(['../src/styles/**/*.scss', '!../src/styles/**/yo/**'])
+  return src(['../src/styles/app.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('../dev/styles'))
     .pipe(connect.reload())
@@ -97,8 +105,9 @@ function packCSS () {
 
 function watcher () {
   watch('../src/*.html', series(copyHtml))
-  watch('../src/scripts/**/*.js', packJS)
+  watch('../src/scripts/**/*', packJS)
   watch('../src/styles/**/*.scss', packCSS)
+  watch('../src/assets/**/*', copyAssets)
 }
 
-exports.default = series(delDevFolder, packJS, packCSS, copyHtml, parallel(webServer, watcher))
+exports.default = series(delDevFolder, packJS, packCSS, parallel(copyAssets,copyHtml), parallel(webServer, watcher))

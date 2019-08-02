@@ -14,5 +14,36 @@
     flex: 1;
     overflow: hidden;
     font-size: .73rem;
+    background: #fff;
+  }
+  footer {
+    color: #c2cfcc;
+    background: #f6f6f6;
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include border(1px 0 0 0, red);
+      li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i, b {
+          font-weight: 100;
+        }
+
+        i {
+          margin-top: -0.02rem;
+        }
+        
+        &.active {
+          background: #e7f3f0;
+          color: #00b38a;
+        }
+      }
+    }
   }
 }
