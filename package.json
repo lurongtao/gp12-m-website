@@ -30,5 +30,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "better-scroll": "^1.15.2"
   }
 }

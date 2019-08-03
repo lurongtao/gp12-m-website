@@ -29,33 +29,35 @@
           }
         }
       }
-      ul {
-        overflow-y: scroll;
+      div#pos-list{
         flex: 1;
-        li.list-item {
-          padding: .14rem;
-          display: flex;
-          @include border(0 0 1px 0);
-          img {
-            width: .6rem;
-            height: .6rem;
-          }
-          .item-desc {
-            padding-left: .15rem;
-            flex: 1;
-            h2.item-title {
-              font-size: .16rem;
+        overflow: hidden;
+        ul {
+          li.list-item {
+            padding: .14rem;
+            display: flex;
+            @include border(0 0 1px 0);
+            img {
+              width: .6rem;
+              height: .6rem;
             }
-            p.item-info {
-              display: flex;
-              justify-content: space-between;
-              > span:last-child {
+            .item-desc {
+              padding-left: .15rem;
+              flex: 1;
+              h2.item-title {
                 font-size: .16rem;
-                color: #00b38a;
               }
-            }
-            p.item-time {
-              color: #888;
+              p.item-info {
+                display: flex;
+                justify-content: space-between;
+                > span:last-child {
+                  font-size: .16rem;
+                  color: #00b38a;
+                }
+              }
+              p.item-time {
+                color: #888;
+              }
             }
           }
         }

@@ -1,1 +1,1 @@
-require('./controller/IndexController')
+import './controller/IndexController'
