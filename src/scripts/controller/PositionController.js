@@ -19,7 +19,30 @@ class PositionController {
 
     $('#pos-list').html(html)
 
-    let bScroll = new BScroll('#pos-list', {})
+    let bScroll = new BScroll('#pos-list', {
+      probeType: 2
+    })
+
+    // 初始化scroll位置，向上滚动 40px
+    bScroll.scrollTo(0, -40)
+
+    // 下拉刷新
+    // bScroll.on('scroll', function() {
+    //   if (this.y < 20 && this.y > -40) {
+
+    //   } else {
+    //     console.log(0)
+    //   }
+    // })
+
+    bScroll.on('touchEnd', function() {
+      if (this.y < 20 && this.y > -40) {
+        this.scrollTo(0, -40, 200)
+      } else {
+        console.log(0)
+      }
+    })
+
   }
 }
 

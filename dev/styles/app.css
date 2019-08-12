@@ -845,6 +845,25 @@ a {
   .index-wrap main .pos-wrap div#pos-list {
     flex: 1;
     overflow: hidden; }
+    .index-wrap main .pos-wrap div#pos-list ul .head,
+    .index-wrap main .pos-wrap div#pos-list ul .foot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: .4rem; }
+    .index-wrap main .pos-wrap div#pos-list ul .head img,
+    .index-wrap main .pos-wrap div#pos-list ul .foot img {
+      width: .16rem;
+      height: .16rem;
+      transition: transform 150ms;
+      -webkit-transition: transform 150ms; }
+    .index-wrap main .pos-wrap div#pos-list ul .head img {
+      transform: rotate(180deg); }
+    .index-wrap main .pos-wrap div#pos-list ul .up {
+      transform: rotate(360deg) !important;
+      -webkit-transform: rotate(360deg) !important; }
+    .index-wrap main .pos-wrap div#pos-list ul .down {
+      transform: rotate(180deg); }
     .index-wrap main .pos-wrap div#pos-list ul li.list-item {
       padding: .14rem;
       display: flex;

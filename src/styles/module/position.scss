@@ -33,6 +33,32 @@
         flex: 1;
         overflow: hidden;
         ul {
+          
+          .head,
+          .foot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: .4rem;
+          }
+          .head img,
+          .foot img {
+            width: .16rem;
+            height: .16rem;
+            transition: transform 150ms;
+            -webkit-transition: transform 150ms;
+          }
+          .head img {
+            transform: rotate(180deg);
+          }
+          .up {
+            transform: rotate(360deg) !important;
+            -webkit-transform: rotate(360deg) !important;
+          }
+          .down {
+            transform: rotate(180deg);
+          }
+
           li.list-item {
             padding: .14rem;
             display: flex;

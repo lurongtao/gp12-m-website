@@ -1,17 +1,25 @@
 <ul>
-    {{each list}}
-    <li class="activeable list-item" >
-      <img src="//www.lgstatic.com/{{$value.companyLogo}}" class="item-logo">
-      <div class="item-desc">
-        <h2 class="item-title">{{$value.companyName}}</h2>
-        <p class="item-info">
-          <span class="item-pos">
-            {{$value.positionName}}
-          </span>
-          <span class="item-salary">{{$value.salary}}</span>
-        </p>
-        <p class="item-time">{{$value.createTime}}</p>
-      </div>
-    </li>
-    {{/each}}
+  <li class="head">
+    <img src="/assets/images/arrow.png"/>
+    <b>下拉刷新...</b>
+  </li>
+  {{each list}}
+  <li class="activeable list-item" >
+    <img src="//www.lgstatic.com/{{$value.companyLogo}}" class="item-logo">
+    <div class="item-desc">
+      <h2 class="item-title">{{$value.companyName}}</h2>
+      <p class="item-info">
+        <span class="item-pos">
+          {{$value.positionName}}
+        </span>
+        <span class="item-salary">{{$value.salary}}</span>
+      </p>
+      <p class="item-time">{{$value.createTime}}</p>
+    </div>
+  </li>
+  {{/each}}
+  <li class="foot">
+    <img src="/assets/images/arrow.png"/>
+    <b>上拉加载更多...</b>
+  </li>
 </ul>
