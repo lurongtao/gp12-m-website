@@ -67,9 +67,13 @@ function packJS () {
   return src('../src/scripts/app.js')
     .pipe(webpack({
         mode: 'development',
-        entry: '../src/scripts/app.js',
+        entry: {
+          app: '../src/scripts/app.js',
+          app_search: '../src/scripts/app_search.js',
+          app_profile: '../src/scripts/app_profile.js'
+        },
         output: {
-          filename: 'app.js'
+          filename: '[name].js'
         },
         module: {
           rules: [
@@ -104,7 +108,7 @@ function delDevFolder() {
 
 // CSS 模块化
 function packCSS () {
-  return src(['../src/styles/app.scss'])
+  return src('../src/styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('../dev/styles'))
     .pipe(connect.reload())
