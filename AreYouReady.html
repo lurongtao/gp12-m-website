@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>点名器</title>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		a,
+		img {
+			border: 0;
+		}
+
+		body {
+			font: 12px/180% "Microsoft YaHei", "微软雅黑", "宋体";
+		}
+
+		#bodybj {
+			background: url(images.jpg) no-repeat center top;
+		}
+
+		#box {
+			margin: auto;
+			width: 660px;
+			font-size: 66px;
+			height: 94px;
+			line-height: 94px;
+			overflow: hidden;
+			color: #138eee;
+			text-align: center;
+			padding: 0 30px;
+			margin-top: 200px;
+		}
+
+		#bt {
+			margin: auto;
+			width: 200px;
+			text-align: center;
+			margin-top: 75px;
+			color: #fff;
+			font-size: 25px;
+			line-height: 28px;
+			cursor: pointer;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var namelist = [
+      "肖光瑞","谢鑫鹏","吕赟飞","谢宇航",
+      "何小娟","王鹏","朱盟","邓修",
+      "李嵩","林海松","赵汪洋","常浩",
+      "谢达文","封雨忱","张怡哲","张卓",
+      "杨松","杜豪刚","潘思佳","王旭",
+      "祖莹","郭森","文君豪","李策",
+      "高展飞","刘彪",
+      "郭振宁","浦文卓",
+      "李罗","李培锋","刘深","姬彩明",
+      "张志博","郭钢","仇明珠","王浩",
+      "黄应锁","杨婉月","张鹏","朱世宇",
+      "徐佳伟","尹亚亭","韩卫静","李红霞",
+      "张朋伟","陆凤妹","郑则栋","李红贵",
+      "钱广荣","高德宇","刘宝灵"
+		]
+    var mytime = null;
+
+		function doit() {
+			var bt = window.document.getElementById("bt");
+			if (mytime == null) {
+				bt.innerHTML = "停止点名";
+				show();
+			} else {
+				bt.innerHTML = "开始点名";
+				clearTimeout(mytime);
+				mytime = null;
+			}
+		}
+
+		function show() {
+			var box = window.document.getElementById("box");
+			var num = Math.floor((Math.random() * 100000)) % namelist.length;
+			box.innerHTML = namelist[num];
+			mytime = setTimeout("show()", 1);
+		}
+	</script>
+</head>
+
+<body id="bodybj">
+
+	<div id="box">亲，准备好点名了吗？</div>
+	<div id="bt" onClick="doit()">开始点名</div>
+
+</body>
+
+</html>

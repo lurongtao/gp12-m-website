@@ -1,5 +1,3 @@
-
-
 import positionTpl from '../views/position.html'
 import positionListTpl from '../views/position_list.html'
 
